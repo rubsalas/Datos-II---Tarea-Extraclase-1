@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/Code.dir/TareaExtraclase1/main.cpp.o CMakeFiles/Code.dir/TareaExtraclase1/List.cpp.o CMakeFiles/Code.dir/TareaExtraclase1/Node.cpp.o CMakeFiles/Code.dir/TareaExtraclase1/Collector.cpp.o  -o Code 

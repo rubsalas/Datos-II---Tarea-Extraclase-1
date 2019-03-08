@@ -1,0 +1,64 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/ruben/TEC/Semestre I - 2019/Algoritmos y Estructuras de Datos II/Tarea Extraclase #1/Code/TareaExtraclase1/Collector.cpp
+iostream
+-
+Collector.h
+/home/ruben/TEC/Semestre I - 2019/Algoritmos y Estructuras de Datos II/Tarea Extraclase #1/Code/TareaExtraclase1/Collector.h
+List.h
+/home/ruben/TEC/Semestre I - 2019/Algoritmos y Estructuras de Datos II/Tarea Extraclase #1/Code/TareaExtraclase1/List.h
+Node.h
+/home/ruben/TEC/Semestre I - 2019/Algoritmos y Estructuras de Datos II/Tarea Extraclase #1/Code/TareaExtraclase1/Node.h
+
+/home/ruben/TEC/Semestre I - 2019/Algoritmos y Estructuras de Datos II/Tarea Extraclase #1/Code/TareaExtraclase1/Collector.h
+stdlib.h
+-
+Node.h
+/home/ruben/TEC/Semestre I - 2019/Algoritmos y Estructuras de Datos II/Tarea Extraclase #1/Code/TareaExtraclase1/Node.h
+List.h
+/home/ruben/TEC/Semestre I - 2019/Algoritmos y Estructuras de Datos II/Tarea Extraclase #1/Code/TareaExtraclase1/List.h
+
+/home/ruben/TEC/Semestre I - 2019/Algoritmos y Estructuras de Datos II/Tarea Extraclase #1/Code/TareaExtraclase1/List.cpp
+iostream
+-
+Collector.h
+/home/ruben/TEC/Semestre I - 2019/Algoritmos y Estructuras de Datos II/Tarea Extraclase #1/Code/TareaExtraclase1/Collector.h
+List.h
+/home/ruben/TEC/Semestre I - 2019/Algoritmos y Estructuras de Datos II/Tarea Extraclase #1/Code/TareaExtraclase1/List.h
+Node.h
+/home/ruben/TEC/Semestre I - 2019/Algoritmos y Estructuras de Datos II/Tarea Extraclase #1/Code/TareaExtraclase1/Node.h
+
+/home/ruben/TEC/Semestre I - 2019/Algoritmos y Estructuras de Datos II/Tarea Extraclase #1/Code/TareaExtraclase1/List.h
+stdlib.h
+-
+Node.h
+/home/ruben/TEC/Semestre I - 2019/Algoritmos y Estructuras de Datos II/Tarea Extraclase #1/Code/TareaExtraclase1/Node.h
+Collector.h
+/home/ruben/TEC/Semestre I - 2019/Algoritmos y Estructuras de Datos II/Tarea Extraclase #1/Code/TareaExtraclase1/Collector.h
+
+/home/ruben/TEC/Semestre I - 2019/Algoritmos y Estructuras de Datos II/Tarea Extraclase #1/Code/TareaExtraclase1/Node.cpp
+iostream
+-
+Collector.h
+/home/ruben/TEC/Semestre I - 2019/Algoritmos y Estructuras de Datos II/Tarea Extraclase #1/Code/TareaExtraclase1/Collector.h
+List.h
+/home/ruben/TEC/Semestre I - 2019/Algoritmos y Estructuras de Datos II/Tarea Extraclase #1/Code/TareaExtraclase1/List.h
+Node.h
+/home/ruben/TEC/Semestre I - 2019/Algoritmos y Estructuras de Datos II/Tarea Extraclase #1/Code/TareaExtraclase1/Node.h
+
+/home/ruben/TEC/Semestre I - 2019/Algoritmos y Estructuras de Datos II/Tarea Extraclase #1/Code/TareaExtraclase1/Node.h
+stdlib.h
+-
+
+/home/ruben/TEC/Semestre I - 2019/Algoritmos y Estructuras de Datos II/Tarea Extraclase #1/Code/TareaExtraclase1/main.cpp
+iostream
+-
+List.h
+/home/ruben/TEC/Semestre I - 2019/Algoritmos y Estructuras de Datos II/Tarea Extraclase #1/Code/TareaExtraclase1/List.h
+
