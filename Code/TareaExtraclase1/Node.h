@@ -7,19 +7,19 @@
 
 #include <stdlib.h>
 
-
 class Node {
-private:
-    int* data;
+private: //Atributos
+    int data;
     Node* next;
 
-public:
-    Node(int valor);
+public: //Metodos
+    Node(int _data);
     int getData();
-    void setData(int data);
+    void setData(int _data);
     Node* getNext();
-    void setNext(Node* next);
+    void setNext(Node* _next);
 };
 
 
 #endif //CODE_NODE_H
+

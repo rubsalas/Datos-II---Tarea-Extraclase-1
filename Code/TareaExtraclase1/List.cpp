@@ -4,8 +4,8 @@
 
 
 #include <iostream>
+#include <stdlib.h>
 
-#include "Collector.h"
 #include "List.h"
 #include "Node.h"
 
@@ -15,64 +15,54 @@ using namespace std;
 List::List() {
     head = NULL;
     tail = NULL;
-    collector = NULL;
 }
 
 Node* List::getHead() {
-
+    return head;
 }
 
-void List::setHead(Node* head) {
-
+void List::setHead(Node* _head) {
+	head = _head;
 }
 
 Node* List::getTail(){
-
+    return tail;
 }
 
-void List::setTail(Node* tail){
-
-}
-
-Collector* List::getCollector(){
-
-}
-
-
-void List::setCollector(Collector *collector) {
-
+void List::setTail(Node* _tail){
+    tail = _tail;
 }
 
 
 void List::newNode(int data){
-    /*if (collector*->getHead() != NULL) {
-        Node* nodeReciclado = collector->getTail();
-        nodeReciclado->setData(data);
-
-
-        if (head == NULL) {
-            head = nodeReciclado;
-        } else {
-
-            Node* temp = head;
-            head = nodeReciclado;
-            nodeReciclado->setNext(temp);
-        }
-    } else { //Cuando collector esta vacio
-        Node* nNode = new Node(data);
-        if (head == NULL) {
-            head = nNode;
-        } else {
-            Node* temp = head;
-            head = nNode;
-            nNode->setNext(temp);
-        }
-    }*/
+    Node* node = new Node(data);
+    if (head == NULL) {
+        head = node;
+    } else {
+        Node* temp = head;
+        head = node;
+        node->setNext(temp);
+    }
 }
 
 
-void List::deleteNode(int data){
-
+Node* List::changeList(int data){
+    Node* delNode = NULL;
+    Node* temp = head;
+    Node* aux = head;
+    while (aux != NULL && aux->getData() != data) {
+        temp = aux;
+        aux = aux->getNext();
+    }
+    if (aux == NULL) {
+        cout << data << " no esta en la lista\n" << endl;
+    } else {
+        delNode = aux;
+        aux = aux->getNext();
+        temp->setNext(aux);
+        cout << "El nodo " << data << " fue cambiado de lista." << endl;
+        return delNode;
+    }
 }
 
 void List::printList(){

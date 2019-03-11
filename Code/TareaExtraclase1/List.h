@@ -8,29 +8,27 @@
 #include <stdlib.h>
 
 #include "Node.h"
-#include "Collector.h"
+
+using namespace std;
 
 
-class Collector;
+//class Collector;
 
 class List {
 
 private:
     Node* head;
     Node* tail;
-    Collector* collector;
 
 public:
     List(); //Constructor
 
     Node* getHead();
-    void setHead(Node* head);
+    void setHead(Node* _head);
     Node* getTail();
-    void setTail(Node* tail);
-    Collector* getCollector();
-    void setCollector(Collector* collector);
+    void setTail(Node* _tail);
     void newNode(int data);
-    void deleteNode(int data);
+    Node* changeList(int data);
     void printList();
 
 };
