@@ -13,20 +13,17 @@
 
 class List {
 
-	private:
-	    Node* head;
-	    Node* tail;
-	    Collector* collector;
+private:
+    Node* head;
+    Collector* collector;
 
-	public:
-	    List(); //Constructor
-	    Node* getHead();
-	    void setHead(Node* _head);
-	    Node* getTail();
-	    void setTail(Node* _tail);
-	    void newNode(int data);
-	    void deleteNode(int data);
-	    void printList();
+public:
+    List(); //Constructor
+    Node* getHead();
+    void setHead(Node* _head);
+    void newNode(int data);
+    Node* deleteNode(int data);
+    void printList();
 
 };
 

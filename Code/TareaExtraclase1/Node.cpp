@@ -16,19 +16,17 @@ Node::Node(int _data){
 }
 
 int Node::getData(){
-	return data;
+    return data;
 }
 
 void Node::setData(int _data){
-	data = _data;
+    data = _data;
 }
 
 Node* Node::getNext(){
-	return next;
+    return next;
 }
 
 void Node::setNext(Node* _next){
-	next = _next;
+    next = _next;
 }
-
-

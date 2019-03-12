@@ -11,21 +11,18 @@
 class Collector {
 
 private:
-	static Collector* instance;
-	Node* head;
-    Node* tail;
+    static Collector* instance;
+    Node* head;
 
 protected:
-	Collector();
+    Collector();
 
 public:
-	static Collector* getInstance();
+    static Collector* getInstance();
     Node* getHead();
     void setHead(Node* _head);
-    Node* getTail();
-    void setTail(Node* _tail);
-    void addNode(int value);
-    void sendNode(int value);
+    void addNode(Node* node);
+    Node* sendNode();
     void printList();
 
 };

@@ -8,16 +8,16 @@
 #include <stdlib.h>
 
 class Node {
-	private: //Atributos
-	    int data;
-	    Node* next;
+private: //Atributos
+    int data;
+    Node* next;
 
-	public: //Metodos
-	    Node(int _data);
-	    int getData();
-	    void setData(int _data);
-	    Node* getNext();
-	    void setNext(Node* _next);
+public: //Metodos
+    Node(int _data);
+    int getData();
+    void setData(int _data);
+    Node* getNext();
+    void setNext(Node* _next);
 };
 
 
