@@ -1,34 +1,34 @@
 //
-// Created by ruben on 11/03/19.
+// Created by ruben on 07/03/19.
 //
 
-#ifndef TESTCOLLECTOR_COLLECTOR_H
-#define TESTCOLLECTOR_COLLECTOR_H
+#ifndef CODE_COLLECTOR_H
+#define CODE_COLLECTOR_H
 
 #include <stdlib.h>
-
 #include "Node.h"
 
-using namespace std;
-
 class Collector {
+
 private:
-    Node* head;
-    int length;
+	static Collector* instance;
+	Node* head;
+    Node* tail;
+
+protected:
+	Collector();
 
 public:
-    Collector(); //Constructor
-
+	static Collector* getInstance();
     Node* getHead();
     void setHead(Node* _head);
-    int getLength();
-    void setLength(int _length);
-    void addNode(Node* node);
-    Node* sendNode();
+    Node* getTail();
+    void setTail(Node* _tail);
+    void addNode(int value);
+    void sendNode(int value);
     void printList();
-
 
 };
 
 
-#endif //TESTCOLLECTOR_COLLECTOR_H
+#endif //CODE_COLLECTOR_H

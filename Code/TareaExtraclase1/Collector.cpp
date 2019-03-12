@@ -1,6 +1,7 @@
 //
-// Created by ruben on 11/03/19.
+// Created by ruben on 07/03/19.
 //
+
 
 #include <iostream>
 
@@ -8,51 +9,46 @@
 
 using namespace std;
 
-Collector::Collector(){ //Constructor
-    head = nullptr;
-    length = 0;
+
+Collector::Collector(){
+    head = NULL;
+    tail = NULL;
+	Collector* collector = Collector::getInstance();
+}
+
+Collector* Collector::instance=0; //Para definir al instance NULL
+
+Collector* Collector::getInstance(){
+	if (instance==0){ 
+		instance = new Collector();
+		}	
+	return instance;
 }
 
 Node* Collector::getHead(){
-    return head;
+	return head;
 }
 
 void Collector::setHead(Node* _head){
-    head = _head;
+	head = _head;
 }
 
-int Collector::getLength(){
-    return length;
+Node* Collector::getTail(){
+	return tail;
 }
 
-void Collector::setLength(int _length){
-    length = _length;
+void Collector::setTail(Node* _tail){
+	tail = _tail;
 }
 
-void Collector::addNode(Node* node) {
-    if (head == NULL) {
-        head = node;
-    } else {
-        Node *temp = head;
-        head = node;
-        node->setNext(temp);
-    }
+void Collector::addNode(int value){
+
 }
 
-Node* Collector::sendNode() {
-    Node* toSend = NULL;
-    if (getHead() != NULL) {
-        toSend = head;
-        head = head->getNext();
-    }
-    return toSend;
+void Collector::sendNode(int value){
+
 }
 
 void Collector::printList(){
-    cout << "Collector: " << endl;
-    Node* temp = head;
-    while (temp != NULL) {
-        cout << temp->getData()  << ", " << endl;
-        temp = temp->getNext();
-    }
+
 }

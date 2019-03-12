@@ -1,7 +1,6 @@
 //
-// Created by ruben on 11/03/19.
+// Created by ruben on 07/03/19.
 //
-
 
 #ifndef CODE_LIST_H
 #define CODE_LIST_H
@@ -11,32 +10,24 @@
 #include "Node.h"
 #include "Collector.h"
 
-using namespace std;
-
-
-//class Collector;
 
 class List {
 
-private:
-    Node* head;
-    Collector* collector;
-    int length;
+	private:
+	    Node* head;
+	    Node* tail;
+	    Collector* collector;
 
-public:
-    List(); //Constructor
-
-    Node* getHead();
-    void setHead(Node* _head);
-    Collector* getCollector();
-    void setCollector(Collector* _collector);
-    int getLength();
-    void setLength(int len);
-    void newNode(int data);
-    Node* deleteNode(int data);
-    void printList();
+	public:
+	    List(); //Constructor
+	    Node* getHead();
+	    void setHead(Node* _head);
+	    Node* getTail();
+	    void setTail(Node* _tail);
+	    void newNode(int data);
+	    void deleteNode(int data);
+	    void printList();
 
 };
 
 #endif //CODE_LIST_H
-
