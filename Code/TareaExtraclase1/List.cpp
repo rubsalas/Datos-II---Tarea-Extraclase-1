@@ -1,7 +1,6 @@
 //
-// Created by ruben on 07/03/19.
+// Created by ruben on 11/03/19.
 //
-
 
 #include <iostream>
 #include <stdlib.h>
@@ -14,7 +13,8 @@ using namespace std;
 //Constructor
 List::List() {
     head = NULL;
-    tail = NULL;
+    collector = NULL;
+    length = 0;
 }
 
 Node* List::getHead() {
@@ -22,31 +22,46 @@ Node* List::getHead() {
 }
 
 void List::setHead(Node* _head) {
-	head = _head;
+    head = _head;
 }
 
-Node* List::getTail(){
-    return tail;
+Collector* List::getCollector(){
+    return collector;
 }
 
-void List::setTail(Node* _tail){
-    tail = _tail;
+void List::setCollector(Collector* _collector){
+    collector = _collector;
 }
 
+int List::getLength(){
+    return length;
+}
+
+void List::setLength(int len){
+    length = len;
+}
 
 void List::newNode(int data){
-    Node* node = new Node(data);
+
+    Node* nNode = collector->sendNode();
+    if (nNode != NULL) {
+        nNode->setData(data);
+    } else {
+        Node nNode2(data);
+        nNode = &nNode2;
+    }
+
     if (head == NULL) {
-        head = node;
+        head = nNode;
     } else {
         Node* temp = head;
-        head = node;
-        node->setNext(temp);
+        head = nNode;
+        nNode->setNext(temp);
     }
+
 }
 
-
-Node* List::changeList(int data){
+Node* List::deleteNode(int data) {
     Node* delNode = NULL;
     Node* temp = head;
     Node* aux = head;
@@ -66,7 +81,10 @@ Node* List::changeList(int data){
 }
 
 void List::printList(){
-
+    cout << "List: " << endl;
+    Node* temp = head;
+    while (temp != NULL) {
+        cout << temp->getData() << ", " << endl;
+        temp = temp->getNext();
+    }
 }
-
-

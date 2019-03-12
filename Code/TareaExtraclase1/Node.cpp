@@ -1,5 +1,5 @@
 //
-// Created by ruben on 07/03/19.
+// Created by ruben on 11/03/19.
 //
 
 
@@ -31,4 +31,5 @@ Node* Node::getNext(){
 void Node::setNext(Node* _next){
     next = _next;
 }
+
 
