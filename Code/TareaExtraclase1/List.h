@@ -15,12 +15,15 @@ class List {
 
 private:
     Node* head;
+    int len;
     Collector* collector;
 
 public:
     List(); //Constructor
     Node* getHead();
     void setHead(Node* _head);
+    int getLen();
+    void setLen(int _len);
     void newNode(int data);
     Node* deleteNode(int data);
     void printList();

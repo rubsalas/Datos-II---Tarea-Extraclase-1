@@ -11,14 +11,14 @@ using namespace std;
 
 
 Collector::Collector(){
-    head = NULL;
-    Collector* collector = Collector::getInstance();
+    head = nullptr;
+    len = 0;
 }
 
 Collector* Collector::instance=0; //Para definir al instance NULL
 
 Collector* Collector::getInstance(){
-    if (instance==0){
+    if (instance== nullptr){
         instance = new Collector();
     }
     return instance;
@@ -32,30 +32,50 @@ void Collector::setHead(Node* _head){
     head = _head;
 }
 
+int Collector::getLen() {
+    return len;
+}
+
+void Collector::setLen(int _len) {
+    len = _len;
+}
+
 void Collector::addNode(Node* node){
-    if (head == NULL) {
+    if (head == nullptr) {
         head = node;
     } else {
         Node *temp = head;
         head = node;
         node->setNext(temp);
     }
+
+    len+=1;
+
 }
 
 Node* Collector::sendNode(){
-    Node* toSend = NULL;
-    if (getHead() != NULL) {
+    Node* toSend = nullptr;
+    Node* temp = head;
+
+    cout << getHead() << endl;
+
+    if (getHead() != nullptr) {
         toSend = head;
-        head = head->getNext();
+        setHead(head->getNext());
     }
+
+    len-=1;
+
     return toSend;
 }
 
 void Collector::printList(){
     cout << "Collector: " << endl;
+    cout << "len: " << len << endl;
     Node* temp = head;
-    while (temp != NULL) {
-        cout << temp->getData()  << ", " << endl;
+    while (temp != nullptr) {
+        cout << temp->getData()  << ", ";
         temp = temp->getNext();
     }
+    cout << "\n";
 }

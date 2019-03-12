@@ -7,22 +7,27 @@ using namespace std;
 
 int main() {
 
+    List lista;
 
+    lista.newNode(10); //Nuevo
+    lista.newNode(20); //Nuevo
+    lista.newNode(40); //Nuevo
 
-    Node* n1 = new Node(45);
-    //n1->setData(67);
-    //Node n2(56);
-    //n1.setData(30);
-    //n1.setNext(n2);
-    cout<<n1->getData()<<endl;
-    //cout<<n2.getData()<<endl;
-    //cout<<n1->getNext()<<endl;
-    //cout<<&n2<<endl;*/
-    List l1;
-    //l1.setHead(n1);
-    l1.newNode(39);
-    //cout<<l1.getHead( )<<endl;
-    return 0;
+    lista.deleteNode(40);
+    lista.deleteNode(20);
+
+    lista.newNode(30);
+    lista.newNode(50);
+    lista.newNode(60);
+    lista.newNode(70); //Nuevo
+
+    lista.deleteNode(60);
+    lista.deleteNode(30);
+    lista.deleteNode(50);
+
+    lista.newNode(80);
+    lista.newNode(90);
+    lista.newNode(100);
+    lista.newNode(110); //Nuevo
+
 }
-
-List createList()

@@ -12,7 +12,7 @@ using namespace std;
 
 Node::Node(int _data){
     data = _data;
-    next = NULL;
+    next = nullptr;
 }
 
 int Node::getData(){

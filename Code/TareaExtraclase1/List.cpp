@@ -13,6 +13,8 @@ using namespace std;
 //Constructor
 List::List() {
     head = NULL;
+    collector = Collector::getInstance();
+    len = 0;
 }
 
 Node* List::getHead() {
@@ -23,45 +25,86 @@ void List::setHead(Node* _head) {
     head = _head;
 }
 
-void List::newNode(int data){
+int List::getLen() {
+    return len;
+}
 
-    Node* nNode = collector->sendNode();
-    if (nNode != NULL) {
+void List::setLen(int _len) {
+    len = _len;
+}
+
+void List::newNode(int data){
+    int lenCollector = collector->getLen();
+
+    Node* nNode;
+
+    if (lenCollector != 0) {
+        nNode = collector->getHead();
+        collector->setHead(nNode->getNext());
         nNode->setData(data);
+        nNode->setNext(nullptr);
+        collector->setLen(collector->getLen()-1);
     } else {
-        Node nNode2(data);
-        nNode = &nNode2;
+        nNode = new Node(data);
     }
 
-    if (head == NULL) {
+    if (head == nullptr) {
         head = nNode;
     } else {
         Node* temp = head;
         head = nNode;
         nNode->setNext(temp);
     }
+
+    len+=1;
+
+
+    printList();
+    collector->printList();
+    cout << "\n" << endl;
+
 }
 
 
 Node* List::deleteNode(int data){
-    Node* delNode = NULL;
+    Node* delNode = nullptr;
     Node* temp = head;
     Node* aux = head;
-    while (aux != NULL && aux->getData() != data) {
+    while (aux != nullptr && aux->getData() != data) {
         temp = aux;
         aux = aux->getNext();
     }
-    if (aux == NULL) {
+    if (aux == nullptr) {
         cout << data << " no esta en la lista\n" << endl;
     } else {
         delNode = aux;
-        aux = aux->getNext();
-        temp->setNext(aux);
-        cout << "El nodo " << data << " fue cambiado de lista." << endl;
-        return delNode;
+        if (head == delNode) {
+            setHead(head->getNext());
+        } else {
+            temp->setNext(aux->getNext());
+        }
     }
+
+    delNode->setNext(nullptr);
+    cout << "El nodo " << data << " fue cambiado de lista." << endl;
+    collector->addNode(delNode);
+
+
+    len-=1;
+
+    printList();
+    collector->printList();
+    cout << "\n" << endl;
+
 }
 
 void List::printList(){
-
+    cout << "List: " << endl;
+    cout << "len: " << len << endl;
+    Node* temp = head;
+    while (temp != nullptr) {
+        cout << temp->getData()  << ", ";
+        temp = temp->getNext();
+    }
+    cout << "\n";
 }

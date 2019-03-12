@@ -10,7 +10,7 @@
 class Node {
 private: //Atributos
     int data;
-    Node* next;
+    Node *next;
 
 public: //Metodos
     Node(int _data);
