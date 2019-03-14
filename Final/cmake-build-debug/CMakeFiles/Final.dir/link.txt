@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/Final.dir/Main/main.cpp.o CMakeFiles/Final.dir/Main/Collector.cpp.o CMakeFiles/Final.dir/Main/List.cpp.o CMakeFiles/Final.dir/Main/Node.cpp.o  -o Final 

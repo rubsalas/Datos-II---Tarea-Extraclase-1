@@ -1,0 +1,54 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/ruben/TEC/Semestre I - 2019/Algoritmos y Estructuras de Datos II/Final/cmake-build-debug/Main/Collector.cpp
+iostream
+-
+Collector.h
+/home/ruben/TEC/Semestre I - 2019/Algoritmos y Estructuras de Datos II/Final/cmake-build-debug/Main/Collector.h
+
+/home/ruben/TEC/Semestre I - 2019/Algoritmos y Estructuras de Datos II/Final/cmake-build-debug/Main/Collector.h
+stdlib.h
+-
+Node.h
+/home/ruben/TEC/Semestre I - 2019/Algoritmos y Estructuras de Datos II/Final/cmake-build-debug/Main/Node.h
+
+/home/ruben/TEC/Semestre I - 2019/Algoritmos y Estructuras de Datos II/Final/cmake-build-debug/Main/List.cpp
+iostream
+-
+stdlib.h
+-
+List.h
+/home/ruben/TEC/Semestre I - 2019/Algoritmos y Estructuras de Datos II/Final/cmake-build-debug/Main/List.h
+
+/home/ruben/TEC/Semestre I - 2019/Algoritmos y Estructuras de Datos II/Final/cmake-build-debug/Main/List.h
+stdlib.h
+-
+Node.h
+/home/ruben/TEC/Semestre I - 2019/Algoritmos y Estructuras de Datos II/Final/cmake-build-debug/Main/Node.h
+Collector.h
+/home/ruben/TEC/Semestre I - 2019/Algoritmos y Estructuras de Datos II/Final/cmake-build-debug/Main/Collector.h
+
+/home/ruben/TEC/Semestre I - 2019/Algoritmos y Estructuras de Datos II/Final/cmake-build-debug/Main/Node.cpp
+iostream
+-
+stdlib.h
+-
+Node.h
+/home/ruben/TEC/Semestre I - 2019/Algoritmos y Estructuras de Datos II/Final/cmake-build-debug/Main/Node.h
+
+/home/ruben/TEC/Semestre I - 2019/Algoritmos y Estructuras de Datos II/Final/cmake-build-debug/Main/Node.h
+stdlib.h
+-
+
+/home/ruben/TEC/Semestre I - 2019/Algoritmos y Estructuras de Datos II/Final/cmake-build-debug/Main/main.cpp
+iostream
+-
+List.h
+/home/ruben/TEC/Semestre I - 2019/Algoritmos y Estructuras de Datos II/Final/cmake-build-debug/Main/List.h
+
