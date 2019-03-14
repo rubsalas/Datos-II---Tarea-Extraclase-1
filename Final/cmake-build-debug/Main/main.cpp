@@ -5,6 +5,10 @@
 
 using namespace std;
 
+/**
+ * Edgar Gonzales - 2018156158
+ * Ruben Salas - 2017164846
+ */
 
 /**
  * Main del programa.
