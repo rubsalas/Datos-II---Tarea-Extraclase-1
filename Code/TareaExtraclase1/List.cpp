@@ -1,7 +1,3 @@
-//
-// Created by ruben on 07/03/19.
-//
-
 
 #include <iostream>
 #include <stdlib.h>
@@ -10,31 +6,61 @@
 
 using namespace std;
 
-//Constructor
+
+/**
+ * Representa a una Lista.
+ *
+ * @since 07/03/19.
+ */
+
+
+/**
+ * Constructor de List.
+ */
 List::List() {
-    head = NULL;
+    head = nullptr;
     collector = Collector::getInstance();
     len = 0;
 }
 
+/**
+ * Getter de de List.
+ * @returns head - primer Node de List
+ */
 Node* List::getHead() {
     return head;
 }
 
+/**
+ * Setter del head de List.
+ * @param _head - Node
+ */
 void List::setHead(Node* _head) {
     head = _head;
 }
 
+/**
+ * Getter del length de List.
+ * @returns len - Cantidad de nodos en List
+ */
 int List::getLen() {
     return len;
 }
 
+/**
+ * Setter del length de List.
+ * @param _len - cantidad
+ */
 void List::setLen(int _len) {
     len = _len;
 }
 
+/**
+ * Crea un nuevo Node o toma uno del Collector para ingresarlo en List.
+ * @param data - numero para el Node
+ */
 void List::newNode(int data){
-    int lenCollector = collector->getLen();
+    int lenCollector = collector->getLen(); //len collector
 
     Node* nNode;
 
@@ -58,15 +84,18 @@ void List::newNode(int data){
 
     len+=1;
 
-
+    cout << "\n" << endl;
     printList();
     collector->printList();
-    cout << "\n" << endl;
+
 
 }
 
-
-Node* List::deleteNode(int data){
+/**
+ * Elimina un Node de List y lo envia al Collector.
+ * @param data
+ */
+void List::deleteNode(int data){
     Node* delNode = nullptr;
     Node* temp = head;
     Node* aux = head;
@@ -86,18 +115,20 @@ Node* List::deleteNode(int data){
     }
 
     delNode->setNext(nullptr);
-    cout << "El nodo " << data << " fue cambiado de lista." << endl;
+    cout << "El nodo " << data << " fue enviado al Collector." << endl;
     collector->addNode(delNode);
-
 
     len-=1;
 
+    cout << "\n" << endl;
     printList();
     collector->printList();
-    cout << "\n" << endl;
 
 }
 
+/**
+ * Imprime los nodos en List.
+ */
 void List::printList(){
     cout << "List: " << endl;
     cout << "len: " << len << endl;
@@ -106,5 +137,5 @@ void List::printList(){
         cout << temp->getData()  << ", ";
         temp = temp->getNext();
     }
-    cout << "\n";
+    cout << "\n" << endl;
 }
